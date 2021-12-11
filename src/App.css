@@ -3,54 +3,84 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.add-students{
-  margin: 30px;
+.dropzone {
+  text-align: center;
+  padding: 20px;
+  border: 3px dashed #eeeeee;
+  background-color: #fafafa;
+  color: #bdbdbd;
+
+  margin-bottom: 20px;
+}
+
+.All-files {
   display: flex;
+  margin-top: 20px;
   flex-direction: column;
-  width: 10%;
   gap: 15px;
+  
 }
 
-.content {
+.forgot-password-fields{
   display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-  justify-content: space-around;
+  flex-direction: row;
+}
+
+.one-file {
+  display: flex;
+ flex-direction: column;
+ border-radius: 4px;
  
-  margin: 50px;
-}
-
-.details {
-  font-size: 18px;
+  height: 140px;
   background-color: white;
-  width: 300px;
- height: min-content;
-  padding: 30px;
-  transition: 0.2s;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding : 0 30px 40px 30px;
+  margin: 10px;
+ 
 }
 
-.details:hover{
-  transform: scale(1.05);
+.btn-grp {
+  display: flex;
+  gap: 20px;
+  width: 20%;
+  
 }
+
+
+
+
+
+.downloada {
+  text-decoration: none;
+
+}
+
+.upload-files{
+
+  height: 120px;
+  background-color: white;
+  padding : 40px;
+  margin: 10px;
+}
+
 
 .add-fields {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 25%;
-  margin-left: 20px;
-  
+  width: 350px;
+  margin-left: 35vw;
+  margin-top: 32vh;
+  background-color: white;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 6px;
   
 }
 
-.form-mentor{
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  gap: 20px;
-  width: 30%;
+@media (max-width: 670px){
+  .add-fields {
+    margin-top: 200px;
+    margin-left: 50px;
+  }
 }
+
+
