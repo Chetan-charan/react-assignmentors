@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { useState } from "react";
 
 
-const url = 'http://localhost:9000'
+const url = 'https://google-drive-app.herokuapp.com'
 
 export function ActivateAccount() {
   const { token } = useParams();
