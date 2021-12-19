@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useFormik } from 'formik';
 import { useState } from "react";
-import { formValidationSchema, url } from "./App";
+import { formValidationSchema, url1 } from "./App";
 
 export function ForgotPassword() {
 
@@ -14,7 +14,7 @@ export function ForgotPassword() {
 
       onSubmit: (values) => {
 
-        fetch(`${url}/forgotPassword`, {
+        fetch(`${url1}/forgotPassword`, {
           method: 'POST', body: JSON.stringify(values), headers: {
             'Content-Type': 'application/json'
           },

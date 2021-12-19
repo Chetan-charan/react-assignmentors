@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import {  useEffect, useState } from "react";
-import {  url } from "./App";
+import {  url1 } from "./App";
 
 
 
@@ -25,14 +25,15 @@ export function Login() {
 
       onSubmit: (values) => {
 
-        fetch(`${url}/login`, {
+        fetch(`${url1}/login`, {
           method: 'POST', body: JSON.stringify(values), headers: {
             'Content-Type': 'application/json'
           },
         }).then((data) => data.json())
           .then((data) => {
             setToken(data.token)
-            localStorage.setItem("token", data.token)
+           
+            sessionStorage.setItem('token', data.token);
           })
           }
           
@@ -41,7 +42,7 @@ export function Login() {
     );
 
     useEffect(() => {
-      token ? history.push("/userFiles/"+values.email) : history.push("/login")
+      token ? history.push("/urlShortener") : history.push("/login")
     },[token,history,values]);
 
 

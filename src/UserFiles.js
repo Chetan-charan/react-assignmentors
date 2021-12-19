@@ -27,6 +27,7 @@ const [upload, setUpload] = useState("");
 
 function handleChange(event) {
     setUpload(event.target.files[0]);
+    console.log(event.target.files[0]);
        
   }
 
@@ -66,10 +67,11 @@ function FileContentView({file,LastModified,token}){
    
    const[fileLink,setFileLink] = useState(null);
    const styles = { fontSize: '20px' }
+   
 
    useEffect(() => {
     fetch(`${url}/download/${file}`)
-    .then((data) => setFileLink(data.url));
+    .then((data) => setFileLink(data.url))
    },[file,token]);
 
  

@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useFormik } from 'formik';
 import { useState } from "react";
-import { url } from "./App";
+import { url1 } from "./App";
 
 export function ResetPassword() {
   const history = useHistory();
@@ -26,7 +26,7 @@ export function ResetPassword() {
 
       onSubmit: (values) => {
 
-        fetch(`${url}/resetPassword/${token}`, {
+        fetch(`${url1}/resetPassword/${token}`, {
           method: 'POST', body: JSON.stringify(values), headers: {
             'Content-Type': 'application/json'
           },

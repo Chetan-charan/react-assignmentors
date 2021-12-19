@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import { useFormik } from 'formik';
 import { useState } from "react";
 import { formValidationSchema } from "./Login";
-import {  url } from "./App";
+import {  url1 } from "./App";
 
 export function Signup() {
 
@@ -17,7 +17,7 @@ export function Signup() {
 
       onSubmit: (values) => {
 
-        fetch(`${url}/signup`, {
+        fetch(`${url1}/signup`, {
           method: 'POST', body: JSON.stringify(values), headers: {
             'Content-Type': 'application/json'
           },

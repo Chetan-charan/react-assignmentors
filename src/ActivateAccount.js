@@ -2,16 +2,16 @@ import { useHistory } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { useState } from "react";
+import { url1 } from "./App";
 
 
-const url = 'https://google-drive-app.herokuapp.com'
 
 export function ActivateAccount() {
   const { token } = useParams();
   const history = useHistory();
   const [message, setmessage] = useState(null);
   try {
-    fetch(`${url}/activateAccount`, {
+    fetch(`${url1}/activateAccount`, {
       method: 'POST', body: JSON.stringify({ token: token }), headers: {
         'Content-Type': 'application/json'
       },
