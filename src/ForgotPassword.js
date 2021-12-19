@@ -2,7 +2,13 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useFormik } from 'formik';
 import { useState } from "react";
-import { formValidationSchema, url1 } from "./App";
+import {  url1 } from "./App";
+import * as yup from 'yup';
+
+const formValidationSchema = yup.object({
+  email: yup.string().min(4, 'Minimum 4 characters required!!').required('required'),
+  
+});
 
 export function ForgotPassword() {
 
